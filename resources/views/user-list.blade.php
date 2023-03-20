@@ -872,15 +872,12 @@
                   </tr>
                   </thead>
                   <tbody>
-                @foreach
-                  <tr>
-                    <td>{{ }}</td>
-                    <td>All others</td>
+                    <tr>
                     <td>-</td>
                     <td>-</td>
                     <td>U</td>
-                  </tr>
-                @endforeach
+                    </tr>
+
                   </tbody>
                   <tfoot>
                   <tr>

@@ -434,7 +434,7 @@
               <li class="nav-item">
                 <a href="../tables/data.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
+                  <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
