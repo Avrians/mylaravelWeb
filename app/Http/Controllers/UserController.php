@@ -19,6 +19,10 @@ class UserController extends Controller
     public function add() {
         return view('user-add');
     }
+    
+    public function edit() {
+        return view('user-edit');
+    }
 
     public function store() {
         $user = new User;

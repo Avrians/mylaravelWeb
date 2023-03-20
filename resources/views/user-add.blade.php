@@ -851,7 +851,7 @@
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->
-          <div class="col-md-6">
+          <div class="col-md-12">
             <!-- Horizontal Form -->
             <div class="card card-info">
               <div class="card-header">
