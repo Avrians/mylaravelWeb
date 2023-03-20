@@ -80,10 +80,20 @@ Route::prefix('admin')->group(function () {
 });
 
 
+// use App\Http\Controllers\UserController;
+// Route::prefix('user')->group(function () {
+//     Route::get('/', [UserController::class, 'index']);
+//     Route::get('/store', [UserController::class, 'store']);
+//     Route::get('/update', [UserController::class, 'update']);
+//     Route::get('/delete', [UserController::class, 'delete']);
+// });
+
+
 use App\Http\Controllers\UserController;
-Route::prefix('user')->group(function () {
-    Route::get('/', [UserController::class, 'index']);
-    Route::get('/store', [UserController::class, 'store']);
-    Route::get('/update', [UserController::class, 'update']);
-    Route::get('/delete', [UserController::class, 'delete']);
+Route::controller(UserController::class)->group(function() {
+    Route::get('user/', 'index');
+    Route::get('user/add', 'add');
+    Route::get('user/store', 'store');
+    Route::get('user/update', 'update');
+    Route::get('user/delete', 'delete');
 });

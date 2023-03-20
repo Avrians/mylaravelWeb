@@ -7,9 +7,17 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function index() {
-        foreach(User::all() as $user) {
-            echo $user -> name.'|'.$user-> email.'<br>';
-        }
+        return view('user-list', [
+            'users' => User::all()
+        ]);
+
+        // foreach(User::all() as $user) {
+        //     // echo $user -> name.'|'.$user-> email.'<br>'
+        //     'users' => User::all()
+        // };
+    }
+    public function add() {
+        return view('user-add');
     }
 
     public function store() {
