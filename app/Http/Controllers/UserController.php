@@ -20,7 +20,7 @@ class UserController extends Controller
         return view('user-add');
     }
     
-    public function edit() {
+    public function edit($id) {
         return view('user-edit');
     }
 
@@ -30,13 +30,13 @@ class UserController extends Controller
         $user->email = 'will@onepiece.com';
         $user->save();
     }
-    public function update() {
+    public function update($id) {
         $user = User::where('name', 'Monkey D Luffy')->first();
         $user->email = 'will@onepiece.com';
         $user->save();
     }
 
-    public function delete() {
+    public function delete($id) {
         $user = User::where('name', 'Monkey D Luffy')->first();
         $user->delete();
     }

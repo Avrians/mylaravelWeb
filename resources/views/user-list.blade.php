@@ -872,23 +872,15 @@
                   </tr>
                   </thead>
                   <tbody>
+                @foreach
                   <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                  </tr>
-
-                  <tr>
-                    <td>Other browsers</td>
+                    <td>{{ }}</td>
                     <td>All others</td>
                     <td>-</td>
                     <td>-</td>
                     <td>U</td>
                   </tr>
+                @endforeach
                   </tbody>
                   <tfoot>
                   <tr>

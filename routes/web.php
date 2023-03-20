@@ -94,7 +94,7 @@ Route::controller(UserController::class)->group(function() {
     Route::get('user/', 'index');
     Route::get('user/add', 'add');
     Route::get('user/store', 'store');
-    Route::get('user/edit', 'edit');
-    Route::get('user/update', 'update');
-    Route::get('user/delete', 'delete');
+    Route::get('user/edit/{id}', 'edit');
+    Route::get('user/update/{id}', 'update');
+    Route::get('user/delete/{id}', 'delete');
 });
