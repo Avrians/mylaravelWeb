@@ -882,8 +882,8 @@
                       <td>{{$user-> upload_at}}</td>
                       <td>{{$user-> updated_at}}</td>
                       <td>
-                        <a href="{{url('user/edit')}}" class="btn-xs btn-primary">Edit</a>
-                        <a href="{{url('user/delete')}}" class="btn-xs btn-danger">Delete</a>
+                        <a href="{{url('user/edit/'.$user->id)}}" class="btn-xs btn-primary">Edit</a>
+                        <a href="{{url('user/delete/'.$user->id)}}" class="btn-xs btn-danger">Delete</a>
                       </td>
                     </tr>
                     @endforeach
