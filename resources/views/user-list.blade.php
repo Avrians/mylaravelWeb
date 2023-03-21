@@ -838,12 +838,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>DataTables</h1>
+            <h1>User List</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
+              <li class="breadcrumb-item active">User List</li>
             </ol>
           </div>
         </div>
@@ -857,35 +857,45 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">User List</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+                <a href="{{ url('user/add') }}" class="btn-sm btn-success">Add User</a><br><br>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>No.</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Create At</th>
+                    <th>Update At</th>
+                    <th>Status</th>
                   </tr>
                   </thead>
                   <tbody>
+                    @foreach ($users as $user)
                     <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>U</td>
+                      <td>{{$loop -> iteration}}</td>
+                      <td>{{$user-> email}}</td>
+                      <td>{{$user-> name}}</td>
+                      <td>{{$user-> upload_at}}</td>
+                      <td>{{$user-> updated_at}}</td>
+                      <td>
+                        <a href="{{url('user/edit')}}" class="btn-xs btn-primary">Edit</a>
+                        <a href="{{url('user/delete')}}" class="btn-xs btn-danger">Edit</a>
+                      </td>
                     </tr>
-
+                    @endforeach
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>No.</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Create At</th>
+                    <th>Update At</th>
+                    <th>Status</th>
                   </tr>
                   </tfoot>
                 </table>
