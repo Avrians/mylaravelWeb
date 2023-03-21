@@ -883,7 +883,7 @@
                       <td>{{$user-> updated_at}}</td>
                       <td>
                         <a href="{{url('user/edit')}}" class="btn-xs btn-primary">Edit</a>
-                        <a href="{{url('user/delete')}}" class="btn-xs btn-danger">Edit</a>
+                        <a href="{{url('user/delete')}}" class="btn-xs btn-danger">Delete</a>
                       </td>
                     </tr>
                     @endforeach
