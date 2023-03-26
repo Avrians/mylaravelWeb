@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Selamat Malam</h1>
     <h1>Selamat Malam {{$nama}}</h1>
     <h3>Jangan lupa besok hari senin</h3>
 </body>

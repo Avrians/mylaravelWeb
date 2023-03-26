@@ -28,11 +28,14 @@ Route::get('/greeting', function() {
 });
 
 Route::get('/perhitungan', function() {
-    return 9*9;
+    $angka1 = 9;
+    $angka2 = 10;
+
+    return $angka1*$angka2;
 });
 
 Route::get('/malam', function() {
-    return view('malam', ['nama' => 'Avrians']);
+    return view('malam', ['nama' => 'Joko']);
 });
 
 // Memanggill router view  secara default
